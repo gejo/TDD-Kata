@@ -13,4 +13,9 @@ public class TennisGameTest {
         TennisGame game = new TennisGame();
         assertEquals("0:0", game.getScore());
     }
+
+    @Test void get_game_result() {
+        TennisGame game = new TennisGame();
+        assertEquals("Duce", game.getGameResult());
+    }
 }
