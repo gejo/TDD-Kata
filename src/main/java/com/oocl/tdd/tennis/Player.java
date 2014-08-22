@@ -18,8 +18,8 @@ public class Player {
 		score = 0;
 	}
 
-	public void winBall() {
-		score = score + 15;
+	public void winBall(int ball) {
+		score = ball * 15;
 	}
 
 	public int getScore() {
