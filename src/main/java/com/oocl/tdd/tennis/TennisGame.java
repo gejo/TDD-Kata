@@ -4,20 +4,20 @@ package com.oocl.tdd.tennis;
  * Created by GEJO on 8/7/2014.
  */
 public class TennisGame {
-    public String getScore() {
-        return playerA + ":" + playerB;
-    }
+	public String getScore() {
+		return playerA + ":" + playerB;
+	}
 
-    public String getGameResult() {
-        return null;
-    }
+	public String getGameResult() {
+		return playerA == playerB ? "Duce" : null;
+	}
 
-    private int playerA;
+	private int playerA;
 
-    private int playerB;
+	private int playerB;
 
-    public TennisGame() {
-        playerA = 0;
-        playerB = 0;
-    }
+	public TennisGame() {
+		playerA = 0;
+		playerB = 0;
+	}
 }
