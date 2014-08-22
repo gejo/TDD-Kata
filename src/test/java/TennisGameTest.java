@@ -16,8 +16,23 @@ public class TennisGameTest {
 	}
 
 	@Test
-	public void get_game_result() {
+	public void win_ball() {
 		TennisGame game = new TennisGame();
-		assertEquals("Duce", game.getGameResult());
+		game.getPlayerA().winBall();
+		assertEquals("15:0", game.getScore());
+	}
+
+	@Test
+	public void deuce_ball() {
+		TennisGame game = new TennisGame();
+		game.getPlayerA().winBall();
+		game.getPlayerA().winBall();
+		game.getPlayerA().winBall();
+
+		game.getPlayerB().winBall();
+		game.getPlayerB().winBall();
+		game.getPlayerB().winBall();
+
+		assertEquals("40:40", game.getScore());
 	}
 }

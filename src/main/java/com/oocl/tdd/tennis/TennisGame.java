@@ -5,19 +5,23 @@ package com.oocl.tdd.tennis;
  */
 public class TennisGame {
 	public String getScore() {
-		return playerA + ":" + playerB;
+		return playerA.getScore() + ":" + playerB.getScore();
 	}
 
-	public String getGameResult() {
-		return playerA == playerB ? "Duce" : null;
-	}
-
-	private int playerA;
-
-	private int playerB;
+	private Player playerA = null;
+	private Player playerB = null;
 
 	public TennisGame() {
-		playerA = 0;
-		playerB = 0;
+		playerA = new Player();
+		playerB = new Player();
 	}
+
+	public Player getPlayerA() {
+		return playerA;
+	}
+
+	public Player getPlayerB() {
+		return playerB;
+	}
+
 }
