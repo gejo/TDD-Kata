@@ -8,29 +8,27 @@ package com.oocl.tdd.tennis;
  * 
  */
 public class Player {
+	private int ball;
 
-    private int score;
+	private String name;
 
-    private String name;
+	public Player(String name) {
+		this.name = name;
+	}
 
-    public Player(String name) {
-        score = 0;
-        this.name = name;
-    }
+	public void winBall(int ball) {
+		this.ball += ball;
+	}
 
-    public void winBall(int ball) {
-        if (ball < 3) {
-            score = ball * 15;
-        } else {
-            score = 40 + (ball - 3) * 15;
-        }
-    }
+	public int getScore() {
+		if (ball < 3) {
+			return ball * 15;
+		} else {
+			return 40 + (ball - 3) * 15;
+		}
+	}
 
-    public int getScore() {
-        return score;
-    }
-
-    public String getName() {
-        return this.name;
-    }
+	public String getName() {
+		return this.name;
+	}
 }
