@@ -24,8 +24,12 @@ public class Player {
 		if (ball < 3) {
 			return ball * 15;
 		} else {
-			return 40 + (ball - 3) * 15;
+			return 40;
 		}
+	}
+
+	public int getBall() {
+		return ball;
 	}
 
 	public String getName() {

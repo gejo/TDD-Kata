@@ -31,12 +31,20 @@ public class TennisGameTest {
     }
 
     @Test
-    public void advantage_ball() {
+    public void a_advantage_ball() {
         TennisGame game = new TennisGame();
         game.getPlayerA().winBall(3);
         game.getPlayerB().winBall(3);
         game.getPlayerA().winBall(1);
         assertEquals("A Advantage", game.getScore());
+    }
+    
+    public void b_advantage_ball() {
+        TennisGame game = new TennisGame();
+        game.getPlayerA().winBall(3);
+        game.getPlayerB().winBall(3);
+        game.getPlayerB().winBall(1);
+        assertEquals("B Advantage", game.getScore());
     }
 
 }
