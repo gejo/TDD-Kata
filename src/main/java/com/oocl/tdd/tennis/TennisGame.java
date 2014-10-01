@@ -12,6 +12,11 @@ public class TennisGame {
     		}else if(ballDiff == -1){
     			return "B Advantage";
     		}
+    		if (ballDiff > 1) {
+    			return "A Win";
+    		} else if (ballDiff < -1) {
+    			return "B Win";
+    		}
     	}
         return playerA.getScore() + ":" + playerB.getScore();
     }
