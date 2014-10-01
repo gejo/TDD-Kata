@@ -47,4 +47,12 @@ public class TennisGameTest {
         assertEquals("B Advantage", game.getScore());
     }
 
+    @Test
+    public void a_win() {
+        TennisGame game = new TennisGame();
+        game.getPlayerA().winBall(3);
+        game.getPlayerB().winBall(3);
+        game.getPlayerA().winBall(2);
+        assertEquals("A Win", game.getScore());
+    }
 }
