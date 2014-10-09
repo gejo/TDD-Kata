@@ -16,30 +16,31 @@ public class TennisGameTest {
     }
 
     @Test
-    public void win_ball() {
+    public void a_score() {
         TennisGame game = new TennisGame();
         game.getPlayerA().winBall(1);
         assertEquals("15:0", game.getScore());
     }
 
     @Test
-    public void deuce_ball() {
+    public void deuce() {
         TennisGame game = new TennisGame();
         game.getPlayerA().winBall(3);
         game.getPlayerB().winBall(3);
-        assertEquals("40:40", game.getScore());
+        assertEquals("Deuce", game.getScore());
     }
 
     @Test
-    public void a_advantage_ball() {
+    public void a_advantage() {
         TennisGame game = new TennisGame();
         game.getPlayerA().winBall(3);
         game.getPlayerB().winBall(3);
         game.getPlayerA().winBall(1);
         assertEquals("A Advantage", game.getScore());
     }
-    
-    public void b_advantage_ball() {
+
+    @Test
+    public void b_advantage() {
         TennisGame game = new TennisGame();
         game.getPlayerA().winBall(3);
         game.getPlayerB().winBall(3);
@@ -55,4 +56,6 @@ public class TennisGameTest {
         game.getPlayerA().winBall(2);
         assertEquals("A Win", game.getScore());
     }
+
+
 }
