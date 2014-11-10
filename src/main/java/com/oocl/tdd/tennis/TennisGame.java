@@ -5,19 +5,20 @@ package com.oocl.tdd.tennis;
  */
 public class TennisGame {
     public String getScore() {
-    	if (playerA.getScore() == 40 && playerB.getScore() == 40) {
-    		int ballDiff = playerA.getBall() - playerB.getBall();
-    		if(ballDiff == 1){
-    			return "A Advantage";
-    		}else if(ballDiff == -1){
-    			return "B Advantage";
-    		}
-    		if (ballDiff > 1) {
-    			return "A Win";
-    		} else if (ballDiff < -1) {
-    			return "B Win";
-    		}
-    	}
+        if (playerA.getScore() == 40 && playerB.getScore() == 40) {
+            int ballDiff = playerA.getBall() - playerB.getBall();
+            if (ballDiff == 1) {
+                return "A Advantage";
+            } else if (ballDiff == -1) {
+                return "B Advantage";
+            } else if (ballDiff > 1) {
+                return "A Win";
+            } else if (ballDiff < -1) {
+                return "B Win";
+            } else {
+                return "Deuce";
+            }
+        }
         return playerA.getScore() + ":" + playerB.getScore();
     }
 

@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -57,5 +57,11 @@ public class TennisGameTest {
         assertEquals("A Win", game.getScore());
     }
 
+    @Test
+    public void b_win() {
+        TennisGame game = new TennisGame();
+        game.getPlayerB().winBall(4);
+        assertEquals("B Win", game.getScore());
+    }
 
 }
